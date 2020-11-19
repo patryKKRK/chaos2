@@ -25,3 +25,7 @@ variable "ami" {
 variable "instance_type" {
   default = "t2.micro"
 }
+
+variable "disk_size" {
+  default = "40"
+}

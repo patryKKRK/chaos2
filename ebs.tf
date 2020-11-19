@@ -1,7 +1,7 @@
 resource "aws_ebs_volume" "example" {
   count             = length(var.public_subnet_range)
   availability_zone = aws_instance.web[count.index].availability_zone
-  size              = 40
+  size              = var.disk_size
 
 }
 
