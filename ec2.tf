@@ -1,7 +1,7 @@
 resource "aws_instance" "web" {
-  ami             = "ami-0649a2ac1437cf3b7"
-  instance_type   = "t2.micro"
   count           = length(var.public_subnet_range)
+  ami             = var.ami
+  instance_type   = var.instance_type
   subnet_id       = var.public_subnet_range[count.index]
   tags            = var.tags
   key_name        = aws_key_pair.deployer.key_name
