@@ -1,5 +1,5 @@
 variable "public_subnet_range" {
-type= "list"
+  type = "list"
 }
 variable "tags" {
   type = "map"
